@@ -10,7 +10,7 @@ document.getElementById("houseRentForm").addEventListener("submit", function(eve
     let totalRent = document.getElementById("totalRent").value.replace(/\./g, ""); // Bỏ dấu chấm
     totalRent = parseFloat(totalRent);
   
-    if (isNaN(totalRent) || totalRent <= 0) {
+    if (isNaN(totalRent) || totalRent <= 2_600_000) {
       alert("Vui lòng nhập một số hợp lệ!");
       return;
     }
