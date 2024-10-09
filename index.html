@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chia tiền nhà</title>
+  <script src="script.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+  <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg w-full">
+    <h1 class="text-2xl font-bold mb-4 text-center">Chia Tiền Nhà</h1>
+    <form id="houseRentForm" class="space-y-4">
+      <label class="block text-gray-700">
+        Nhập tổng tiền nhà (VNĐ):
+        <input type="text" id="totalRent" placeholder="Nhập tổng tiền" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required>
+      </label>
+      <button type="submit" class="w-full bg-blue-500 text-white font-bold py-2 rounded-md hover:bg-blue-700">Tính toán</button>
+    </form>
+
+    <div id="result" class="mt-6 hidden">
+      <h2 class="text-lg font-semibold mb-2">Kết quả</h2>
+      <p class="text-gray-700 font-bold">Tổng số tiền người 1 phải trả: <span id="totalPerson1"></span> VNĐ</p>
+      <p class="text-gray-700">Trong đó:</p>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>Tiền điện: <span id="person1Electricity"></span> VNĐ</li>
+        <li>Tiền nước: <span id="waterCost"></span> VNĐ</li>
+        <li>Tiền nhà: <span id="roomCost"></span> VNĐ</li>
+        <li>Tiền net: <span id="netCost"></span> VNĐ</li>
+      </ul>
+      <p class="text-gray-700 font-bold mt-4">Tổng số tiền người 2 phải trả: <span id="totalPerson2"></span> VNĐ</p>
+      <p class="text-gray-700">Trong đó:</p>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>Tiền điện: <span id="person2Electricity"></span> VNĐ</li>
+        <li>Tiền nước: <span id="waterCost2"></span> VNĐ</li>
+        <li>Tiền nhà: <span id="roomCost2"></span> VNĐ</li>
+        <li>Tiền net: <span id="netCost2"></span> VNĐ</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
